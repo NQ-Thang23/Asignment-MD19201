@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM</title>
+    <link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/boo
+tstrap.min.css" rel="stylesheet">
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootst
+rap.bundle.min.js"></script>
+</head>
+<Style>
+    .mer{
+      color: white;
+      margin-left: 30px;
+    }
+    .dongxe{
+      background-color: black;
+      height: 50px;
+    }
+    .dongxe h1{
+      color: white;
+      padding: 5px;
+      margin-left: 10px;
+    }
+    article{
+      background-color: rgb(59, 59, 59);
+      height: 900px;
+      width: 25%;
+      float: left;
+    }
+    .PhanLoai {
+      margin-left: 30px;
+    }
+    .PhanLoai h2{
+      border: 1px solid white;
+      background-color: white;
+      border-radius: 5px;
+      width: 250px;
+      padding: 10px;
+      text-align: center;
+    }
+    .dien{
+      border: 1px solid white;
+      background-color: white;
+      border-radius: 5px;
+      width: fit-content;
+      padding: 10px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    .dien a{
+      text-decoration: none;
+      color: black;
+    }
+    .thanxe{
+      padding: 10px;
+      border: 1px solid white;
+      background-color: white;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      width: 250px;  
+      margin-top: 25px;
+    }
+    .thanxe1{
+      padding: 10px;
+      border: 1px solid white;
+      background-color: white;
+      width: 250px;  
+    }
+    .thanxe2{
+      padding: 10px;
+      border: 1px solid white;
+      background-color: white;
+      width: 250px;  
+    }
+    .thanxe3{
+      padding: 10px;
+      border: 1px solid white;
+      background-color: white;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      width: 250px; 
+      margin-bottom: 25px; 
+    }
+    .thanxeall a{
+      text-decoration: none;
+      color: black;
+    }
+    .thanxeall hr{
+      width: 270px;
+    }
+    .xemtatca{
+      margin-top: 20px ;
+    }
+    .xemtatca a{
+      color: black;
+      text-decoration: none;
+    }
+    .PhanLoai a:hover{
+      color: rgba(243, 54, 54, 0.842);
+    }
+    aside{
+      background-color: rgb(48, 47, 47);
+      height: 900px;
+      width: 75%;
+      float: right;
+    }
+    .main{
+      display: flex;
+      flex-flow: row wrap;
+      padding: 30px 25px;
+    }
+    .card{
+      margin: 15px;
+    }
+    footer{
+      clear: both;
+      background-color: black;
+      height: 130px;
+      color: white;
+    }
+</Style>
+<body>
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" >
+        <div class="container-fluid ">
+          <a class="navbar-brand text-light" href="#">
+            <img src="./anh/meclogo.png" alt="Logo" width="40" height="40" class="d-inline-block  ">
+            Mercedes-Benz</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="asm2.html">Chi tiết</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="asm3.html">Liên Hệ</a>
+              </li>
+            </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./anh/banner.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://di-uploads-pod3.dealerinspire.com/rbmofalpharettamercedesbenz/uploads/2018/07/2018-Mercedes-Benz-C-Class-AMG-Models-Banner-71918.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://di-uploads-pod5.dealerinspire.com/mercedesbenzofstlouis/uploads/2018/08/2018-MB-C-Class-Sun-Banner.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar bg-dark border-bottom border-body">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">
+            <img src="./anh/meclogo.png" alt="Logo" width="40" height="40" class="d-inline-block  ">
+            <b class="text-light">Mercesdes-Benz</b>
+          </a>
+        </div>
+      </nav>
+      <article>
+        <div class="PhanLoai">
+            <br><br><h2>Loại nhiên liệu</h2>
+            <div class="dien"><a href=""><b>Điện</b></a></div>
+            <H2>Loại thân xe</H2>
+            <div class="thanxeall">
+                <div class="thanxe">
+                    <a href=""><b>Sedans</b></a>
+                </div>
+                <hr>
+                <div class="thanxe1">
+                    <a href=""><b>Xe địa hình / SUV</b></a>
+                </div>
+                <hr>
+                <div class="thanxe2"><a href=""><b>Xe coupe</b></a></div>
+                <hr>
+                <div class="thanxe3"><a href=""><b>Xe đa dụng</b></a></div>
+            </div>
+            <div class="xemtatca">
+                <a href=""><h2>Xem tất cả</h2></a>
+            </div>
+        </div>
+    </article>
+    <aside>
+      <div class="main ">
+        <div class="item">
+          <div class="card" style="width: 18rem;">
+            <img src="./anh/mêc.png" class="card-img-top mt-4" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./anh/CLA MEC.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./anh/mecs63.png" class="card-img-top mt-5" alt="...">
+          <div class="card-body">
+            <h5 class="card-title mt-4">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./anh/mecv.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./anh/maybachs600.png" class="card-img-top mt-4" alt="...">
+          <div class="card-body">
+            <h5 class="card-title mt-3">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./anh/mecM2.2 (2).png" class="card-img-top mt-4" alt="...">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+      <footer>
+          <div class="card-body ms-5">
+            <h5 class="card-title">Kết nối với Mercedes-Benz</h5>
+            <p class="card-text">Hãy giữ kết nối và nhận ngay quà tặng chính hãng để nâng tầm trải nghiệm dịch vụ.</p>
+            <a href="#" class="btn btn-primary">Đăng ký</a>
+          </div>
+      </footer>
+</body>
+</html>
